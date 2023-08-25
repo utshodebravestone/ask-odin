@@ -1,0 +1,123 @@
+@font-face {
+  font-family: Norse;
+  src: url("./assets/Norse-Bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Norse;
+}
+
+:root {
+  --header-height: 4rem;
+  --footer-height: 3rem;
+  --search-card-height: calc(
+    100vh - (var(--header-height) + var(--footer-height))
+  );
+}
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  padding: 1rem;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 0 0.25rem 0 rgb(175, 175, 175);
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(95, 95, 95);
+  transition: color 0.5s;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.search-card {
+  width: 100%;
+  height: var(--search-card-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(252, 252, 252);
+}
+
+.search-card .logo {
+  height: 15%;
+}
+
+.search-card .title {
+  font-size: 3rem;
+  color: rgb(205, 165, 95);
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  width: min(55%, 36rem);
+  font-size: 1.4rem;
+  border: 0.1rem solid rgb(225, 225, 225);
+  border-radius: 2rem;
+}
+
+.interactives {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.interactive {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.4rem;
+  background-color: rgb(250, 250, 250);
+  border: 0.1rem solid rgb(225, 225, 225);
+  border-radius: 0.2rem;
+  color: rgb(95, 95, 95);
+  transition: color 0.5s, scale 0.5s;
+  cursor: pointer;
+}
+
+.interactive:hover {
+  color: black;
+  scale: 1.05;
+}
+
+.footer {
+  width: 100%;
+  height: var(--footer-height);
+  padding: 1rem;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 0 0.25rem 0 rgb(175, 175, 175);
+}
+
+.footer-link {
+  color: rgb(125, 125, 125);
+}
